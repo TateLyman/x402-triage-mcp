@@ -1,0 +1,56 @@
+{
+  "name": "x402-triage-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.TateLyman/x402-triage-mcp",
+  "description": "MCP server for no-payment x402 surface triage, 402 Index health checks, and paid review handoff.",
+  "type": "module",
+  "homepage": "https://tateprograms.com/x402-surface-check.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TateLyman/x402-triage-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TateLyman/x402-triage-mcp/issues"
+  },
+  "bin": {
+    "x402-triage-mcp": "dist/src/server.js"
+  },
+  "files": [
+    "dist/src",
+    "README.md",
+    "SECURITY.md",
+    "LICENSE",
+    "server.json"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "check": "npm run lint && npm test",
+    "prepare": "npm run build",
+    "pack:dry": "npm pack --dry-run"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "x402",
+    "agent-payments",
+    "402-index",
+    "pay-sh",
+    "api-marketplace",
+    "security"
+  ],
+  "author": "Tate Programs <hello@tateprograms.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
