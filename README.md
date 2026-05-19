@@ -79,9 +79,20 @@ Returns:
 - `https://tateprograms.com/x402-five-attack-review.html`
 - `https://tateprograms.com/x402-fix-sprint.html`
 
-## Safety Boundary
+## Payment And Safety Boundary
 
 Use this server only on public launch surfaces that you own or are authorized to inspect. Do not submit private URLs, tokenized URLs, customer data, wallet seed phrases, or production secrets.
+
+This MCP server is read-only. It does not initiate payments, send `X-PAYMENT` headers, sign wallet messages, call paid endpoints, create invoices, settle balances, or grant purchasing authority. The only paid paths it returns are static Tate Programs handoff URLs for teams that choose to buy a separate review.
+
+For agent-commerce reviews, the server reports whether the target surface exposes the safety controls buyers expect before real spend is enabled:
+
+- Spend limits: per-call and total budget caps should be explicit before an agent can pay.
+- Approval checkpoints: payment setup and high-risk spend should require a visible user or policy approval step.
+- Recipient validation: paid requests should be constrained to expected domains, merchants, wallet addresses, or signed registry entries.
+- Replay protection: challenges and settlement callbacks should use nonces, expirations, idempotency keys, signed resources, or equivalent controls.
+- Metadata minimization: payment metadata should avoid private user context, secrets, and unnecessary resource detail.
+- Receipts and audit trails: successful payments should produce transaction IDs, recipient, amount, reason, and policy evidence.
 
 ## Development
 

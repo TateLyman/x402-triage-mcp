@@ -1,23 +1,25 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.TateLyman/x402-triage-mcp",
+  "title": "x402 Triage MCP",
   "description": "MCP server for no-payment x402 surface triage, 402 Index health checks, and paid review handoff.",
-  "status": "active",
   "repository": {
     "url": "https://github.com/TateLyman/x402-triage-mcp",
     "source": "github"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packages": [
     {
-      "registry": "npm",
-      "name": "x402-triage-mcp",
-      "version": "0.1.0",
-      "runtime_hint": "npx --yes --package x402-triage-mcp x402-triage-mcp"
+      "registryType": "npm",
+      "identifier": "x402-triage-mcp",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      }
     }
   ],
   "remotes": [],
-  "website_url": "https://tateprograms.com/x402-surface-check.html",
+  "websiteUrl": "https://tateprograms.com/x402-surface-check.html",
   "tags": [
     "x402",
     "agent-payments",

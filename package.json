@@ -1,6 +1,6 @@
 {
   "name": "x402-triage-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "mcpName": "io.github.TateLyman/x402-triage-mcp",
   "description": "MCP server for no-payment x402 surface triage, 402 Index health checks, and paid review handoff.",
   "type": "module",
