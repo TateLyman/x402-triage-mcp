@@ -7,7 +7,7 @@
   "homepage": "https://tateprograms.com/x402-surface-check.html",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TateLyman/x402-triage-mcp.git"
+    "url": "https://github.com/TateLyman/x402-triage-mcp"
   },
   "bugs": {
     "url": "https://github.com/TateLyman/x402-triage-mcp/issues"
